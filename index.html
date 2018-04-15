@@ -3,11 +3,34 @@
 <head>
 	<title>First React App</title>
 	<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+	<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
 </head>
 <body>
 	<div id="app"></div>
 	<script>
-		
+		const name =  'Crystal';
+		const handle = '@cort0619';
+		const nameElement = React.createElement(
+		'h1', 
+		null,
+		//{ id: 'header' },
+		name
+		); // type of tag, any attributes, children of element  ;creates an object representation of a dom node
+
+		// console.log('headerElement ', headerElement);
+
+		const handleElement = React.createElement(
+			'h3',
+			null,
+			handle
+		);
+
+		const wrapperElement = React.createElement();
+
+		ReactDOM.render(
+			nameElement,
+			document.getElementById('app')
+		) //first pass element, where you want react to render eleemnt to
 	</script>
 </body>
 </html>
